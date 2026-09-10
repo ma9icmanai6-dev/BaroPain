@@ -2,6 +2,7 @@ import React from 'react';
 import { WeatherData, PainLog } from '../types';
 import { AreaChart, Area, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 import { Home, Clock, TrendingUp, Cloud, Bell, User, FileText, Settings, ShieldAlert, Thermometer, Droplets, Wind, Sparkles } from 'lucide-react';
+import { motion } from 'motion/react';
 
 interface HudDashboardViewProps {
   weather: WeatherData;
@@ -24,7 +25,12 @@ export const HudDashboardView: React.FC<HudDashboardViewProps> = ({
   }));
 
   return (
-    <div className="relative min-h-[900px] w-full rounded-3xl overflow-hidden shadow-2xl bg-slate-950 border border-slate-800 text-white p-4 sm:p-6 font-sans">
+    <motion.div 
+      initial={{ opacity: 0, scale: 0.99 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.4 }}
+      className="relative min-h-[900px] w-full rounded-3xl overflow-hidden shadow-2xl bg-slate-950 border border-slate-800 text-white p-4 sm:p-6 font-sans"
+    >
       {/* Background HUD Image */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
@@ -323,6 +329,6 @@ export const HudDashboardView: React.FC<HudDashboardViewProps> = ({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
