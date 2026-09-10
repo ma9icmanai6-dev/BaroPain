@@ -1,0 +1,6 @@
+{
+  "name": "Barometric Pain Monitor",
+  "description": "Advanced barometric pressure & weather sensitivity monitor, pain logger, forecast predictor, and AI wellness advisor.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

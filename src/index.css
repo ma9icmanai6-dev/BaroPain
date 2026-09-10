@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@keyframes mapZoomPan {
+  0% {
+    transform: scale(1) translate(0px, 0px);
+  }
+  50% {
+    transform: scale(1.06) translate(-10px, -5px);
+  }
+  100% {
+    transform: scale(1) translate(0px, 0px);
+  }
+}
+
+.animate-map-pan {
+  animation: mapZoomPan 25s ease-in-out infinite;
+}
+
