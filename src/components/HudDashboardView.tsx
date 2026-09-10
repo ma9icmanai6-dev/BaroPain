@@ -33,13 +33,13 @@ export const HudDashboardView: React.FC<HudDashboardViewProps> = ({
           className="w-full h-full object-cover opacity-90 mix-blend-luminosity animate-map-pan"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-slate-950/20 backdrop-blur-[0.5px]" />
+        <div className="absolute inset-0 bg-slate-950/30 backdrop-blur-sm" />
       </div>
 
       {/* Foreground Interactive Content Grid */}
       <div className="relative z-10 grid grid-cols-12 gap-4">
         {/* Left Sidebar Navigation */}
-        <div className="col-span-12 lg:col-span-2 bg-slate-950/75 backdrop-blur-[0.5px] rounded-2xl border border-sky-500/40 p-4 flex lg:flex-col justify-between items-center lg:items-stretch space-y-0 lg:space-y-6 shadow-xl shadow-sky-950/20">
+        <div className="col-span-12 lg:col-span-2 bg-slate-950/45 backdrop-blur-xl rounded-2xl border border-sky-500/40 p-4 flex lg:flex-col justify-between items-center lg:items-stretch space-y-0 lg:space-y-6 shadow-xl shadow-sky-950/20">
           <div className="flex items-center space-x-2 lg:mb-4">
             <div className="w-8 h-8 rounded-lg bg-sky-500/20 border border-sky-400/50 flex items-center justify-center text-sky-400 shadow-lg shadow-sky-500/30">
               <Cloud className="w-5 h-5 animate-pulse" />
@@ -104,7 +104,7 @@ export const HudDashboardView: React.FC<HudDashboardViewProps> = ({
           {/* Top Row: Left Cloud Panel, Center Globe/Risk, Right Telemetry */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
             {/* Top Left: Barometric Pressure Card */}
-            <div className="lg:col-span-4 bg-slate-950/75 backdrop-blur-[0.5px] rounded-2xl border border-sky-500/40 p-5 flex flex-col justify-between shadow-xl shadow-sky-950/20 relative overflow-hidden">
+            <div className="lg:col-span-4 bg-slate-950/45 backdrop-blur-xl rounded-2xl border border-sky-500/40 p-5 flex flex-col justify-between shadow-xl shadow-sky-950/20 relative overflow-hidden">
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-sky-500/10 rounded-full blur-2xl pointer-events-none" />
               <div>
                 <div className="flex justify-between items-center mb-3">
@@ -144,7 +144,7 @@ export const HudDashboardView: React.FC<HudDashboardViewProps> = ({
             </div>
 
             {/* Top Center: Earth Globe & Pain Risk Gauge */}
-            <div className="lg:col-span-4 bg-slate-950/75 backdrop-blur-[0.5px] rounded-2xl border border-sky-500/40 p-5 flex flex-col items-center justify-center text-center relative overflow-hidden shadow-xl shadow-sky-950/20">
+            <div className="lg:col-span-4 bg-slate-950/45 backdrop-blur-xl rounded-2xl border border-sky-500/40 p-5 flex flex-col items-center justify-center text-center relative overflow-hidden shadow-xl shadow-sky-950/20">
               <div className="absolute inset-0 bg-radial from-rose-500/20 via-transparent to-transparent pointer-events-none animate-pulse" />
               
               {/* Graphical Circular SVG Gauge */}
@@ -204,7 +204,7 @@ export const HudDashboardView: React.FC<HudDashboardViewProps> = ({
             </div>
 
             {/* Top Right: Weather Telemetry List */}
-            <div className="lg:col-span-4 bg-slate-950/75 backdrop-blur-[0.5px] rounded-2xl border border-sky-500/40 p-5 flex flex-col justify-between shadow-xl shadow-sky-950/20 relative overflow-hidden">
+            <div className="lg:col-span-4 bg-slate-950/45 backdrop-blur-xl rounded-2xl border border-sky-500/40 p-5 flex flex-col justify-between shadow-xl shadow-sky-950/20 relative overflow-hidden">
               <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none" />
               <div className="flex justify-between items-center mb-2">
                 <span className="text-[11px] uppercase tracking-wider text-sky-300 font-bold">ATMOSPHERIC TELEMETRY</span>
@@ -247,7 +247,7 @@ export const HudDashboardView: React.FC<HudDashboardViewProps> = ({
               { title: 'BACK PAIN', score: 6, status: 'Moderate', color: 'text-amber-400', border: 'border-amber-500/40' },
               { title: 'NECK PAIN', score: 5, status: 'Moderate', color: 'text-amber-400', border: 'border-amber-500/40' },
             ].map((pain, idx) => (
-              <div key={idx} className={`bg-slate-950/75 backdrop-blur-[0.5px] rounded-2xl border ${pain.border} p-4 flex items-center justify-between shadow-lg shadow-sky-950/10 relative overflow-hidden group hover:border-sky-400 transition-all`}>
+              <div key={idx} className={`bg-slate-950/45 backdrop-blur-xl rounded-2xl border ${pain.border} p-4 flex items-center justify-between shadow-lg shadow-sky-950/10 relative overflow-hidden group hover:border-sky-400 transition-all`}>
                 <div className="absolute inset-0 bg-gradient-to-r from-sky-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative z-10">
                   <p className="text-[10px] tracking-wider text-slate-300 font-bold">{pain.title}</p>
@@ -267,7 +267,7 @@ export const HudDashboardView: React.FC<HudDashboardViewProps> = ({
           {/* Bottom Row: Pressure Chart & Weather Map Overview */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
             {/* Bottom Left: Pressure Trend Chart */}
-            <div className="lg:col-span-7 bg-slate-950/75 backdrop-blur-[0.5px] rounded-2xl border border-sky-500/40 p-5 shadow-xl shadow-sky-950/20 relative overflow-hidden">
+            <div className="lg:col-span-7 bg-slate-950/45 backdrop-blur-xl rounded-2xl border border-sky-500/40 p-5 shadow-xl shadow-sky-950/20 relative overflow-hidden">
               <div className="flex justify-between items-center mb-3">
                 <div>
                   <h3 className="text-xs font-bold uppercase tracking-wider text-sky-200">Pressure Trend (48 Hours)</h3>
@@ -293,7 +293,7 @@ export const HudDashboardView: React.FC<HudDashboardViewProps> = ({
             </div>
 
             {/* Bottom Right: Weather System Overview */}
-            <div className="lg:col-span-5 bg-slate-950/75 backdrop-blur-[0.5px] rounded-2xl border border-sky-500/40 p-5 flex flex-col justify-between shadow-xl shadow-sky-950/20 relative overflow-hidden">
+            <div className="lg:col-span-5 bg-slate-950/45 backdrop-blur-xl rounded-2xl border border-sky-500/40 p-5 flex flex-col justify-between shadow-xl shadow-sky-950/20 relative overflow-hidden">
               <div>
                 <div className="flex justify-between items-center mb-1">
                   <h3 className="text-xs font-bold uppercase tracking-wider text-sky-200">Weather System Overview</h3>
