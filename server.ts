@@ -7,8 +7,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const __filename = typeof import.meta !== 'undefined' && import.meta.url ? fileURLToPath(import.meta.url) : '';
-const __dirname = path.dirname(__filename || process.cwd());
+const currentDir = typeof __dirname !== 'undefined' ? __dirname : process.cwd();
 
 const app = express();
 const PORT = 3000;
@@ -150,7 +149,7 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
-    const distPath = __dirname;
+    const distPath = currentDir.endsWith('dist') ? currentDir : path.join(currentDir, 'dist');
     app.use(express.static(distPath));
     app.get('*', (req, res) => {
       res.sendFile(path.join(distPath, 'index.html'));
